@@ -84,12 +84,79 @@
         .glass-panel { background: rgba(51, 53, 56, 0.8); backdrop-filter: blur(12px); }
     </style>
 </head>
-<body class="selection:bg-primary-container selection:text-on-primary-container">
+<body class="selection:bg-primary-container selection:text-on-primary-container bg-surface text-on-surface">
 
-  <p class="py-12">secciones Dani</p>
-  
-  <p class="py-12">secciones Mario</p>
-  
-  <p class="py-12">secciones Santi</p>
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-outline-variant/15">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center space-x-2 group">
+        <span class="font-headline text-2xl font-black tracking-tighter text-primary group-hover:text-primary-container transition-colors">
+          7 TORQUES
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#servicios" class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wide">SERVICIOS</a>
+        <a href="#nosotros" class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wide">NOSOTROS</a>
+        <a href="#contacto" class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wide">CONTACTO</a>
+        
+        <a href="#agendar" class="font-headline text-sm font-bold px-6 py-2.5 rounded-lg bg-gradient-to-br from-primary-container to-primary text-on-primary-container shadow-lg shadow-primary-container/20 hover:scale-105 active:scale-95 transition-all">
+          AGENDAR CITA
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden p-2 text-primary">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-surface-container-high/95 backdrop-blur-xl border-t border-outline-variant/15 py-8 px-6 shadow-2xl">
+      <nav class="flex flex-col space-y-6 text-center">
+        <a href="#servicios" class="mobile-nav-link font-headline text-lg font-bold text-on-surface">SERVICIOS</a>
+        <a href="#nosotros" class="mobile-nav-link font-headline text-lg font-bold text-on-surface">NOSOTROS</a>
+        <a href="#contacto" class="mobile-nav-link font-headline text-lg font-bold text-on-surface">CONTACTO</a>
+        <a href="#agendar" class="font-headline text-lg font-bold py-4 rounded-lg bg-primary-container text-on-primary-container">
+          AGENDAR CITA
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-32 px-6">
+    <p class="py-12 border-b border-outline-variant/10">secciones Dani</p>
+    <p class="py-12 border-b border-outline-variant/10">secciones Mario</p>
+    <p class="py-12">secciones Santi</p>
+  </main>
+
+  <script>
+    // Mobile Menu Toggle logic
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuBtn.querySelector('span');
+
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.textContent = 'close';
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      }
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      });
+    });
+  </script>
 </body>
 </html>
