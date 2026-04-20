@@ -106,12 +106,106 @@
         }
     </style>
 </head>
+<body class="selection:bg-primary-container selection:text-on-primary-container bg-surface text-on-surface">
 
-<body class="selection:bg-primary-container selection:text-on-primary-container">
+  <!-- Header -->
+  <header class="fixed top-0 left-0 w-full z-50 glass-panel border-b border-outline-variant/15">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center space-x-2 group">
+        <span class="font-headline text-2xl font-black tracking-tighter text-primary group-hover:text-primary-container transition-colors">
+          7 TORQUES
+        </span>
+      </a>
 
-    <p class="py-12">secciones Dani</p>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#servicios" class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wide">SERVICIOS</a>
+        <a href="#nosotros" class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wide">NOSOTROS</a>
+        <a href="#contacto" class="font-body text-sm font-semibold text-on-surface-variant hover:text-primary transition-colors tracking-wide">CONTACTO</a>
+        
+        <a href="#agendar" class="font-headline text-sm font-bold px-6 py-2.5 rounded-lg bg-gradient-to-br from-primary-container to-primary text-on-primary-container shadow-lg shadow-primary-container/20 hover:scale-105 active:scale-95 transition-all">
+          AGENDAR CITA
+        </a>
+      </nav>
 
-    <p class="py-12">secciones Mario</p>
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden p-2 text-primary">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-surface-container-high/95 backdrop-blur-xl border-t border-outline-variant/15 py-8 px-6 shadow-2xl">
+      <nav class="flex flex-col space-y-6 text-center">
+        <a href="#servicios" class="mobile-nav-link font-headline text-lg font-bold text-on-surface">SERVICIOS</a>
+        <a href="#nosotros" class="mobile-nav-link font-headline text-lg font-bold text-on-surface">NOSOTROS</a>
+        <a href="#contacto" class="mobile-nav-link font-headline text-lg font-bold text-on-surface">CONTACTO</a>
+        <a href="#agendar" class="font-headline text-lg font-bold py-4 rounded-lg bg-primary-container text-on-primary-container">
+          AGENDAR CITA
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- SECTION 1: HERO -->
+    <section class="relative min-h-[921px] flex items-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img class="w-full h-full object-cover opacity-40 brightness-50" data-alt="dramatic wide shot of a high-end motorcycle workshop with professional tools and a sleek superbike on a hydraulic lift in low light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC99pP83dxFEm8e-R_AOHIWDYmNYRePjOUBDduOCdCJqOkg1E6IinVIeVi_E2m8AVmsyK6dmY45Vc4_txi5mi5DwDpNtem-6UMNMs0aNEgihKEXpvTazQ3HdJq6mtzmPXdx15fFJSa7zv6kFV2YscA1Nx53Z9A9UOb3YVEpxvonAUxHeLJu6lAxwHeqTvQAhi7bnNDYBAlbS4pVkKUo8fzQ5uKyAoqSXi8rrAHWpfzcIDTiDJGhBDRDvSkMMe5varqGU78ZfqM3Je-3"/>
+        <div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+      </div>
+      <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-8">
+          <div class="flex gap-3">
+            <span class="bg-surface-container-high px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-primary border border-outline-variant/30">Diagnóstico técnico</span>
+            <span class="bg-surface-container-high px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] text-primary border border-outline-variant/30">Mantenimiento especializado</span>
+          </div>
+          <h1 class="font-headline text-5xl md:text-7xl font-bold leading-[1.1] tracking-tight text-white">
+            Ingeniería de <span class="text-primary">Precisión</span> para tu Pasión
+          </h1>
+          <p class="text-on-surface-variant text-lg md:text-xl max-w-lg font-body leading-relaxed">
+            Elevamos el estándar del mantenimiento para motocicletas de mediana y alta cilindrada en Colombia. Rigor técnico y cuidado excepcional en cada torque.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-headline font-bold text-lg hover:shadow-[0_0_20px_rgba(255,107,0,0.4)] transition-all active:scale-95">Agenda tu servicio</button>
+            <button class="border-2 border-primary/40 text-primary px-8 py-4 rounded-lg font-headline font-bold text-lg hover:bg-primary/5 transition-all">Ver servicios</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT THE WORKSHOP -->
+    <section class="py-24 bg-surface-container-low relative" id="nosotros">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div class="order-2 md:order-1 relative">
+          <div class="absolute -top-4 -left-4 w-24 h-24 border-t-2 border-l-2 border-primary-container/50"></div>
+          <img class="rounded-xl shadow-2xl relative z-10 border border-outline-variant/20" data-alt="meticulously clean motorcycle service bay with organized tool chest and a naked bike engine exposed for maintenance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFrIbVNZf24KxBscFKZRQbgYHH4c_qLz9erga7Z6tdNa6_CvqiBT0IPgjvIGW4TB80DgkveWJGhp2PCKs46Xf4zS-xrqCMeqy1p4GAp0R02NORbWnV5PkYQ0mXCPsojSSNQTPn3zew__NHuyYFCBYF40doYlUyIx6VPv3RM7EMwFB8m4UdAHSU0nWo_F1OF0C4Pq8MWh7s_75VbRL8xHGM9Tf567LjUasJ77xLJrSj8sZxMpJE8dhjMmbPT8xmcr8xsdIdkarN7UeM"/>
+          <div class="absolute -bottom-4 -right-4 w-24 h-24 border-b-2 border-r-2 border-primary-container/50"></div>
+        </div>
+        <div class="order-1 md:order-2 space-y-6">
+          <h2 class="font-headline text-4xl font-bold text-white tracking-tight">Sobre 7 Torques</h2>
+          <div class="w-16 h-1 bg-primary-container"></div>
+          <p class="text-on-surface-variant text-lg leading-relaxed">
+            Nacimos de la necesidad de un servicio que comprenda la complejidad técnica de las máquinas modernas. En 7 Torques, no solo realizamos mantenimientos; aplicamos ingeniería de precisión.
+          </p>
+          <p class="text-on-surface-variant text-lg leading-relaxed">
+            Especializados en media y alta cilindrada, nuestro taller es un santuario de orden y limpieza donde la transparencia y el rigor técnico son los valores que guían cada intervención.
+          </p>
+          <div class="grid grid-cols-2 gap-8 pt-6">
+            <div>
+              <div class="text-3xl font-headline font-black text-primary">100%</div>
+              <div class="text-sm font-headline uppercase tracking-widest text-slate-500">Transparencia</div>
+            </div>
+            <div>
+              <div class="text-3xl font-headline font-black text-primary">+500</div>
+              <div class="text-sm font-headline uppercase tracking-widest text-slate-500">Motos Atendidas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- SECTION 6: WORKSHOP FOCUS -->
     <section class="py-24 bg-surface-container-low">
@@ -172,6 +266,7 @@
             </div>
         </div>
     </section>
+
     <!-- SECTION 7: TESTIMONIALS -->
     <section class="py-24 bg-background">
         <div class="max-w-7xl mx-auto px-6">
@@ -232,6 +327,7 @@
             </div>
         </div>
     </section>
+
     <!-- SECTION 8: CONTACT AND BOOKING -->
     <section class="py-24 bg-surface-container-lowest" id="contacto">
         <div class="max-w-7xl mx-auto px-6">
@@ -321,36 +417,65 @@
             </div>
         </div>
     </section>
-    <!-- SECTION 9: FOOTER -->
-    <footer class="w-full py-12 bg-[#111316] border-t border-[#282a2d]">
-        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <div class="text-lg font-bold text-white font-['Space_Grotesk'] uppercase tracking-tighter">7 Torques
-                </div>
-                <p class="text-slate-500 text-xs font-['Manrope'] uppercase tracking-widest text-center md:text-left">
-                    Ingeniería de Precisión para Motocicletas.</p>
-            </div>
-            <div class="flex gap-8 font-['Manrope'] text-sm uppercase tracking-widest">
-                <a class="text-slate-500 hover:text-[#ff6b00] transition-colors" href="#">Privacidad</a>
-                <a class="text-slate-500 hover:text-[#ff6b00] transition-colors" href="#">Términos</a>
-                <a class="text-slate-500 hover:text-[#ff6b00] transition-colors" href="#">Soporte</a>
-            </div>
-            <div class="flex gap-4">
-                <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all"
-                    href="#">
-                    <span class="material-symbols-outlined text-sm">public</span>
-                </a>
-                <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all"
-                    href="#">
-                    <span class="material-symbols-outlined text-sm">camera</span>
-                </a>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto px-8 mt-8 pt-8 border-t border-outline-variant/10 text-center">
-            <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em]">© 2024 7 Torques. Diseñado para el máximo
-                rendimiento.</p>
-        </div>
-    </footer>
+
+  </main>
+
+  <!-- SECTION 9: FOOTER -->
+  <footer class="w-full py-12 bg-[#111316] border-t border-[#282a2d]">
+      <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
+          <div class="flex flex-col items-center md:items-start gap-2">
+              <div class="text-lg font-bold text-white font-['Space_Grotesk'] uppercase tracking-tighter">7 Torques
+              </div>
+              <p class="text-slate-500 text-xs font-['Manrope'] uppercase tracking-widest text-center md:text-left">
+                  Ingeniería de Precisión para Motocicletas.</p>
+          </div>
+          <div class="flex gap-8 font-['Manrope'] text-sm uppercase tracking-widest">
+              <a class="text-slate-500 hover:text-[#ff6b00] transition-colors" href="#">Privacidad</a>
+              <a class="text-slate-500 hover:text-[#ff6b00] transition-colors" href="#">Términos</a>
+              <a class="text-slate-500 hover:text-[#ff6b00] transition-colors" href="#">Soporte</a>
+          </div>
+          <div class="flex gap-4">
+              <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all"
+                  href="#">
+                  <span class="material-symbols-outlined text-sm">public</span>
+              </a>
+              <a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary transition-all"
+                  href="#">
+                  <span class="material-symbols-outlined text-sm">camera</span>
+              </a>
+          </div>
+      </div>
+      <div class="max-w-7xl mx-auto px-8 mt-8 pt-8 border-t border-outline-variant/10 text-center">
+          <p class="text-slate-600 text-[10px] uppercase tracking-[0.3em]">© 2024 7 Torques. Diseñado para el máximo
+              rendimiento.</p>
+      </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle logic
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = menuBtn.querySelector('span');
+
+    menuBtn.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        mobileMenu.classList.remove('hidden');
+        menuIcon.textContent = 'close';
+      } else {
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      }
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      });
+    });
+  </script>
 </body>
 
 </html>
